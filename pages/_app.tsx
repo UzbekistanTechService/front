@@ -1,6 +1,13 @@
-import '@/styles/globals.css'
+import '@/styles/globals.sass'
+import { ThemeProvider } from '@mui/material'
 import type { AppProps } from 'next/app'
+import { createTheme } from "@/theme"
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  const theme = createTheme()
+  return (
+    <ThemeProvider theme={theme}>
+      <Component {...pageProps} />
+    </ThemeProvider>
+  )
 }

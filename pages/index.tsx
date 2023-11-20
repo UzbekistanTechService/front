@@ -1,3 +1,5 @@
+import Portfolio from "@/components/Portfolio";
+import Solutions from "@/components/Solutions";
 import Head from "next/head";
 
 export default function Home() {
@@ -10,10 +12,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id perspiciatis
-        excepturi recusandae corporis ipsum, necessitatibus similique aliquid
-        ducimus et, esse nemo at explicabo quidem vel commodi culpa saepe!
-        Atque, doloremque.
+        <Portfolio />
+        <Solutions />
       </main>
     </>
   );

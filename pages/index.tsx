@@ -1,3 +1,4 @@
+import Workers from "@/components/workers";
 import Head from "next/head";
 
 export default function Home() {
@@ -14,6 +15,8 @@ export default function Home() {
         excepturi recusandae corporis ipsum, necessitatibus similique aliquid
         ducimus et, esse nemo at explicabo quidem vel commodi culpa saepe!
         Atque, doloremque.
+
+        <Workers />
       </main>
     </>
   );

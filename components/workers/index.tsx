@@ -6,8 +6,7 @@ import Link from 'next/link';
 
 
 export default function Workers() {
-
-
+ 
     const workersTeam = [
         {
             img: "y9.webp",

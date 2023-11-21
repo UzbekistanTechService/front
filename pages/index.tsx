@@ -1,3 +1,4 @@
+import Sponsors from "@/components/sponsor";
 import Workers from "@/components/workers";
 import Head from "next/head";
 
@@ -17,6 +18,7 @@ export default function Home() {
         Atque, doloremque.
 
         <Workers />
+        <Sponsors />
       </main>
     </>
   );

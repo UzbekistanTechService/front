@@ -1,0 +1,24 @@
+@import ../../styles/variables, ../../styles/mixins
+
+.container
+    @include container
+    overflow: inherit
+
+    .item_spons
+        border-bottom: 1px solid #ccc
+        padding: 10px
+
+    .item_worker
+        position: relative
+        width: 100%
+        height: 100px
+        overflow: hidden
+        img
+            width: 70% !important
+            object-fit: contain
+                // @media(max-width:$screen-lg)
+                //     height: 280px
+                // @media(max-width:$screen-md)
+                //     height: 200px
+                // @media(max-width:$screen-sm)
+                //     height: 250px 

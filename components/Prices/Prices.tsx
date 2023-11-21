@@ -2,10 +2,8 @@ import React from "react";
 import styles from "./index.module.sass";
 import { prices } from "./data";
 import { Button, Typography } from "@mui/material";
-import { useRouter } from "next/navigation";
 
-const Prices = () => {
-  const router = useRouter()
+export const Prices = () => {
   return (
     <section className={styles.prices}>
       <div className={styles.prices__box}>
@@ -33,7 +31,7 @@ const Prices = () => {
                 )}
               </div>
               <Button
-                onClick={() => router.push(`/purchase/${data.id}`)}
+
                 variant={data.isSupport == true ? "contained" : "outlined"}
               >
                 Purchase
@@ -45,5 +43,3 @@ const Prices = () => {
     </section>
   );
 };
-
-export default Prices;

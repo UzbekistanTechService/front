@@ -1,4 +1,5 @@
 import Portfolio from "@/components/Portfolio";
+import Prices from "@/components/Prices";
 import Solutions from "@/components/Solutions";
 import Head from "next/head";
 
@@ -14,6 +15,7 @@ export default function Home() {
       <main>
         <Portfolio />
         <Solutions />
+        <Prices />
       </main>
     </>
   );

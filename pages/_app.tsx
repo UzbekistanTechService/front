@@ -22,7 +22,7 @@ export default function App({ Component, pageProps: { session, ...pageProps } }:
 
   useEffect(() => {
     if (api) {
-      if (!api.checkToken() && pathname != "/login") router.push("/login");
+      if (!api.checkToken() && pathname != "/login" && pathname != "/password-recovery" && pathname != "/register") router.push("/login");
     }
   }, [api]);
 

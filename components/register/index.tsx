@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Box, Button, Typography } from "@mui/material"
 import styles from "./index.module.sass"
 import { FcGoogle } from "react-icons/fc"
@@ -27,16 +27,26 @@ export default function Register() {
 
     const handleOpen = async () => {
         setOpen(true);
-        signIn("google", { callbackUrl: 'https://marketing-uts.onrender.com/api/user/google', redirect: true })
+        // signIn("google", { callbackUrl: '    ', redirect: true })
 
-        // try {
-        //     await router.push("https://marketing-uts.onrender.com/api/user/google")
-        //     const { data } = await axios.get("https://marketing-uts.onrender.com/api/user/google/callback")
-        //     console.log(data);
-        // } catch (e) {
-        //     console.log(e);
-        // }
+        try {
+            await router.push("https://marketing-uts.onrender.com/api/user/google")
+
+            await axios.get("https://marketing-uts.onrender.com/api/user/google/callback").then((res) => console.log(res.data))
+        } catch (e) {
+            console.log(e);
+        }
     }
+
+    // useEffect(() => {
+    //     axios.get('https://marketing-uts.onrender.com/api/user/google/callback')
+    //       .then(function (response) {
+    //         console.log(response.data);
+    //       })
+    //       .catch(function (error) {
+    //         console.log(error);
+    //       });
+    //   }, []);
 
     const router = useRouter()
 
@@ -49,7 +59,7 @@ export default function Register() {
                 password: passwordRegister,
             })
 
-            localStorage.setItem("userTokenRegister", res?.data.token);
+            localStorage.setItem("userToken", res?.data.token);
             router.push("/")
         } catch (e) {
             console.log(e);
@@ -81,7 +91,7 @@ export default function Register() {
                     </form>
 
                     <Box className={styles.reg__footerCard}>
-                        <Button variant="contained" onClick={onFinish}>Registration</Button>
+                        <Button variant="contained" onClick={onFinish} disabled={nameRegister === "" || emailRegister === "" || passwordRegister === ""}>Registration</Button>
 
                         <Typography>-OR-</Typography>
 

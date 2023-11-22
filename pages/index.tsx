@@ -17,7 +17,7 @@ export default function Home() {
   const router = useRouter()
 
   useEffect(() => {
-    if (localStorage.getItem("userToken") || localStorage.getItem("userTokenRegister")) {
+    if (api.getToken()) {
       setShowConfetti(true)
     }
   }, [])

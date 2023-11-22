@@ -11,10 +11,11 @@ import 'react-toastify/dist/ReactToastify.css';
 import { useApi } from "@/components/api";
 
 export default function Login() {
-    const [open, setOpen] = useState<boolean>(false);
+    const [open, setOpen] = useState<boolean>(false)
     const [emailRegister, setEmailRegister] = useState<string>("")
     const [passwordRegister, setPasswordRegister] = useState<string>("")
     const [eyePassword, setEyePassword] = useState<boolean>(false)
+    const [isChecked, setChecked] = useState<boolean>(false);
     const router = useRouter()
     const api = useApi();
 
@@ -34,6 +35,8 @@ export default function Login() {
             setOpen(false)
         }
     }
+
+
 
 
     return <>
@@ -65,14 +68,14 @@ export default function Login() {
                     </form>
                     <Box className={styles.reg__checkboxAndLink}>
                         <Box>
-                            <input id="remember" type="checkbox" />
+                            <input id="remember" type="checkbox" onChange={() => setChecked(!isChecked)} />
                             <label htmlFor="remember">Remember me</label>
                         </Box>
-                        <a href="#">Forgot Password?</a>
+                        <Link href="/password-recovery">Forgot Password?</Link>
                     </Box>
 
                     <Box className={styles.reg__footerCard}>
-                        <Button variant="contained" onClick={onFinish}>Login</Button>
+                        <Button variant="contained" onClick={onFinish} disabled={emailRegister === "" || passwordRegister === "" || isChecked === false}>Login</Button>
 
                         <Typography>-OR-</Typography>
 

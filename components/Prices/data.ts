@@ -10,28 +10,28 @@ interface Prices {
 export const prices: Prices[] = [
   {
     id: 1,
-    name: "Branding",
+    name: "Smm",
     desc: "More power for small teams create project plans with confidence",
     price: "Free",
     isSupport: false
   },
   {
     id: 2,
-    name: "Branding",
+    name: "Smm",
     desc: "More power for small teams create project plans with confidence",
     price: 20,
     isSupport: true
   },
   {
     id: 3,
-    name: "Branding",
+    name: "Smm",
     desc: "More power for small teams create project plans with confidence",
     price: 20,
     isSupport: false
   },
   {
     id: 4,
-    name: "Branding",
+    name: "Smm",
     desc: "More power for small teams create project plans with confidence",
     price: "Custom",
     isSupport: false

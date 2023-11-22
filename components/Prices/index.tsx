@@ -33,7 +33,7 @@ const Prices = () => {
                 )}
               </div>
               <Button
-                onClick={() => router.push(`/purchase/${data.id}`)}
+                onClick={() => router.push(`/purchase/${data.id}?name=${data.name.toLowerCase()}`)}
                 variant={data.isSupport == true ? "contained" : "outlined"}
               >
                 Purchase

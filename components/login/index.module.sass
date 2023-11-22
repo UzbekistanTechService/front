@@ -10,12 +10,14 @@
         display: flex
         align-items: center
         justify-content: center
+        @media (max-width: 1120px)
+            display: none
 
     &__info
         position: absolute
         right: 0
-        width: 700px
-        height: 666px
+        width: 550px
+        height: 600px
         padding: 43px 57px
         flex-shrink: 0
         border-radius: 30px 0px 0px 30px
@@ -27,7 +29,6 @@
             leading-trim: both
             text-edge: cap
             font-family: Heebo
-            font-size: 70px
             font-style: normal
             font-weight: 900
             line-height: 30px
@@ -47,8 +48,9 @@
         img
             position: absolute
             bottom: -20px
-            right: -130px
+            right: -50px
             z-index: 999
+            width: 450px
 
     &__right
         width: 50%
@@ -58,6 +60,8 @@
         display: flex
         align-items: center
         justify-content: center
+        @media (max-width: 1120px)
+            width: 100%
 
         img:nth-child(1)
             position: absolute
@@ -70,18 +74,30 @@
             bottom: 0
             right: 0
             width: 350px
+            @media (max-width: 1120px)
+                left: 0
+                transform: rotateY(180deg)
 
     &__form
         position: absolute
         text-align: center
         left: 0
-        width: 700px
-        height: 666px
+        width: 550px
+        height: 600px
         flex-shrink: 0
-        padding: 43px 130px
+        padding: 35px 50px
         border-radius: 0px 30px 30px 0px
         background: #F6F4FF
         box-shadow: 0px 0px 59px 10px rgba(255, 255, 255, 0.20) inset, 4px 4px 4px 0px rgba(156, 156, 156, 0.25)
+        @media (max-width: 1120px)
+            position: relative
+            border-radius: 30px
+            width: 70%
+
+        @media (max-width: 600px)
+            position: relative
+            border-radius: 30px
+            width: 90%
 
         h2
             color: #000
@@ -93,28 +109,63 @@
             line-height: 35px
             letter-spacing: 0.86px
             text-transform: capitalize
+            margin: 0
+            margin-bottom: 50px
+            @media (max-width: 720px)
+                font-size: 30px
 
         form
             display: flex
             flex-direction: column
             align-items: flex-start
-            gap: 23px
+            gap: 15px
+            @media (max-width: 1120px)
+                gap: 17px
 
-            input
-                width: 444px
-                height: 60px
-                border: none
-                outline: none
-                padding: 0px 20px
-                border-radius: 5px
-                font-size: 20px
-                background: #FDFDFD
-                box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.12)
+    &__inputRegister
+        width: 100%
+        height: 50px
+        border: none
+        outline: none
+        padding: 0px 20px
+        border-radius: 5px
+        font-size: 20px
+        background: #FDFDFD
+        box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.12)
+        @media (max-width: 720px)
+            height: 40px
+
+    &__inputPassword
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 100%
+        height: 50px
+        border: none
+        outline: none
+        padding: 0px 20px
+        border-radius: 5px
+        font-size: 20px
+        background: #FDFDFD
+        box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.12)
+        @media (max-width: 720px)
+            height: 40px
+
+        input
+            outline: none
+            border: none
+            width: 100%
+            height: 50px
+            font-size: 20px
+
+        span
+            cursor: pointer
+            font-size: 20px
 
             p
                 color: #000
                 font-family: Harmattan
-                font-size: 35px
+                font-size: 25px
                 font-style: normal
                 font-weight: 400
                 line-height: 20px
@@ -131,7 +182,7 @@
             align-items: center
             gap: 10px
 
-            p
+            label
                 color: #000
                 font-family: Heebo
                 font-size: 20px
@@ -139,6 +190,7 @@
                 font-weight: 400
                 line-height: 20px
                 text-transform: capitalize
+                cursor: pointer
 
         a
             color: #EC6DB5
@@ -154,6 +206,7 @@
         display: flex
         flex-direction: column
         gap: 13px
+        margin-top: 30px
 
         div
             display: flex
@@ -185,6 +238,8 @@
             font-weight: 300
             line-height: 20px
             text-transform: capitalize
+            @media (max-width: 720px)
+                font-size: 15px
 
         a
             color: #EE86C3
@@ -195,18 +250,76 @@
             line-height: 20px
             text-transform: capitalize
             text-decoration: none
+            @media (max-width: 720px)
+                font-size: 15px
 
     &__user
         position: absolute
         bottom: 0
         left: 0
+        width: 400px
+        height: 600px
+        border-radius: 30px
+        background: linear-gradient(183deg, rgba(236,236,236,1) 0%, rgba(170,170,170,1) 100%)
+        text-align: center
 
         img:nth-child(1)
             position: absolute
-            bottom: 0
-            left: 0
+            top: 30px
+            left: 100px
+            width: 150px
 
         img:nth-child(2)
             position: absolute
-            bottom: 0
-            left: 0
+            top: 15px
+            left: 70px
+            width: 270px
+
+        img:nth-child(3)
+            position: absolute
+            top: 30px
+            left: 30px
+            width: 270px
+
+    &__linkButton
+        position: absolute
+        bottom: 50px
+        padding: 0 30px
+
+        h2
+            color: #000
+            text-align: center
+            font-family: Lora
+            font-size: 40px
+            font-style: italic
+            font-weight: 600
+            line-height: 35px
+            text-transform: capitalize
+
+        p
+            color: rgba(0, 0, 0, 0.75)
+            text-align: center
+            font-family: Lora
+            font-size: 18px
+            font-style: normal
+            font-weight: 600
+            line-height: 150%
+            text-transform: capitalize
+
+        button
+            height: 40px
+            padding: 10px 30px
+            flex-shrink: 0
+            border-radius: 5px
+            background: #DCA711
+            color: #FFF
+            text-align: center
+            leading-trim: both
+            text-edge: cap
+            font-family: Heebo
+            font-size: 16px
+            font-style: normal
+            font-weight: 500
+            line-height: 0px
+            letter-spacing: 1.12px
+            text-transform: capitalize

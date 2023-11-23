@@ -1,0 +1,69 @@
+@import "./variables"
+@import "./mixins"
+$words-height: 55px
+
+.hero_bg
+  background-image: url("/images/hero-bg-front.jpg")
+
+.hero
+  @include container
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  gap: 20px
+  color: white
+  padding: 7rem 0
+
+  &__box
+    max-width: 700px
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+
+  & h3
+    line-height: 50px
+    @media (max-width: $screen-sm)
+      line-height: 45px
+      font-size: 1.8rem
+
+  &__animation
+    display: flex
+    flex-direction: row
+    gap: 20px
+
+  &__animationbox
+    width: fit-content
+    overflow-y: hidden
+    height: $words-height
+    background: #3C39C6
+    padding: 5px
+    color: white
+    text-align: center
+
+    & ul
+      display: flex
+      flex-direction: column
+      gap: 20px
+      animation: wordsposition 20s infinite
+      animation-delay: 2s
+      animation-timing-function: ease
+
+    & li
+      list-style: none
+
+  &__subtitle
+    max-width: 50%
+    @media (max-width: $screen-sm)
+      max-width: 100%
+
+
+@keyframes wordsposition
+  0%
+    transform: translateY(0)
+  50%
+    transform: translateY(-100%)
+  100%
+    transform: translateY(-50%)

@@ -1,0 +1,28 @@
+@import "./variables"
+@import "./mixins"
+
+.clients
+  @include container
+
+  &__box
+    @include clients
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr
+
+  &__imagecontainer
+    border-bottom: 1px solid #ccc
+    padding: 20px 0
+    display: flex
+    align-items: center
+    justify-content: center
+
+  &__imagebox
+    padding: 0
+    height: 90px
+    display: flex
+    align-items: center
+    justify-content: center
+
+    & img
+      max-width: 60%
+      height: auto

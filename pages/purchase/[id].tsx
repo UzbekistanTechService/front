@@ -2,12 +2,13 @@ import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import style from "@/styles/purchase.module.sass";
 import { useRouter } from "next/router";
-import { Alert, Snackbar, TextField, Typography } from "@mui/material";
+import { Alert, Box, Snackbar, TextField, Typography, useTheme } from "@mui/material";
 import { LoadingButton } from "@mui/lab";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "@/utils/axios.config";
 import purchaseAnimation from "@/icons/PurchaseAnim.json"
+import Image from "next/image";
 
 const Purchase = () => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -148,9 +149,9 @@ const Purchase = () => {
             </LoadingButton>
           </form>
         </div>
-        <div className={style.purchase__right}>
-          
-        </div>
+        <Box sx={{ bgcolor: "primary.main" }} className={style.purchase__right}>
+          <Image src={"/images/purchase.png"} alt="purchase" width={500} height={500}/>
+        </Box>
       </main>
     </>
   );

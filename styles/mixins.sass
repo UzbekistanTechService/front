@@ -22,3 +22,11 @@
     display: grid
     grid-template-columns: 1fr
     gap: 30px
+
+@mixin clients
+  @media (max-width: $screen-md)
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr 1fr
+  @media (max-width: $screen-sm)
+    display: grid
+    grid-template-columns: 1fr 1fr

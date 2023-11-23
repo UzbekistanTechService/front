@@ -1,3 +1,5 @@
+import Clients from "@/components/Clients";
+import Hero from "@/components/Hero";
 import Portfolio from "@/components/Portfolio";
 import Prices from "@/components/Prices";
 import Solutions from "@/components/Solutions";
@@ -13,9 +15,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
+        <Hero />
         <Portfolio />
         <Solutions />
         <Prices />
+        <Clients />
       </main>
     </>
   );

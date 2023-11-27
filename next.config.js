@@ -13,7 +13,7 @@ const nextConfig = {
         hostname: 'sociallyin.com'
       }
     ]
-  }
+  },
 }
 
 module.exports = nextConfig

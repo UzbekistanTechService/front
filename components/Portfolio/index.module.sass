@@ -1,0 +1,52 @@
+@import "../../styles/mixins.sass"
+@import "../../styles/variables.sass"
+
+.portfolio
+  position: relative
+  width: 100%
+  @include container
+  &__image
+    width: 100%
+    height: auto
+    background-size: cover
+
+  &__box
+    display: flex
+    flex-direction: column
+    gap: 20px
+    cursor: pointer
+
+  &__footer
+    display: flex
+    flex-direction: column
+    gap: 10px
+
+  &__title
+    display: flex
+    flex-direction: row
+    gap: 10px
+    align-items: center
+    justify-content: space-between
+
+  &__desc
+    width: 100%
+    display: -webkit-box
+    -webkit-line-clamp: 3
+    -webkit-box-orient: vertical
+    overflow: hidden
+
+  &__swiper_button
+    @include swiperbutton
+    display: flex
+    align-items: center
+    justify-content: center
+    position: absolute
+    top: 50%
+    left: 80px
+    z-index: 10
+    cursor: pointer
+    transform: rotate(180deg)
+    background: black
+    width: 80px
+    height: 80px
+    border-radius: 3px

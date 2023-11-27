@@ -6,6 +6,14 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'sociallyin.com'
+      }
+    ]
+  }
 }
 
 module.exports = nextConfig

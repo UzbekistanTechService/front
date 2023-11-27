@@ -1,31 +1,18 @@
 import Head from 'next/head'
-import { Inter } from 'next/font/google'
-import { useEffect, useState } from "react"
-import Confetti from "react-confetti";
-import 'react-toastify/dist/ReactToastify.css';
-import useWindowSize from 'react-use/lib/useWindowSize'
 import { Button } from '@mui/material';
 import { useApi } from '@/components/api';
 import { useRouter } from 'next/router';
-
-const inter = Inter({ subsets: ['latin'] })
+import Clients from "@/components/Clients";
+import Hero from "@/components/Hero";
+import Portfolio from "@/components/Portfolio";
+import Prices from "@/components/Prices";
+import Solutions from "@/components/Solutions";
+import Workers from "@/components/workers";
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Home() {
-  const [showConfetti, setShowConfetti] = useState<boolean>(false);
-  const { width, height } = useWindowSize()
   const api = useApi()
   const router = useRouter()
-
-  useEffect(() => {
-    if (api.getToken()) {
-      setShowConfetti(true)
-    }
-  }, [])
-
-  setTimeout(() => {
-    setShowConfetti(false);
-  }, 6000);
-
 
   return (
     <>
@@ -35,12 +22,20 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {showConfetti && <Confetti numberOfPieces={200} width={width} height={height} />}
-
-      <main className={`${inter.className}`}>
-        Hello World
+      <main>
         <Button color="error" variant="contained" onClick={() => { api.logOut(); router.push("/login") }}>Exit</Button>
+        <Hero />
+        <Portfolio />
+        <Solutions />
+        <Prices />
+        <Clients />
+        <Workers />
+        <div className="videobackground">
+          <video autoPlay loop muted>
+            <source src="/images/mindshare_header_video.mp4" type="video/mp4" />
+          </video>
+        </div>
       </main>
     </>
-  )
+  );
 }

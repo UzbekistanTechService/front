@@ -1,5 +1,8 @@
-import '@/styles/globals.css'
+import '@/styles/globals.sass'
+import { ThemeProvider } from '@mui/material'
 import type { AppProps } from 'next/app'
+import { createTheme } from "@/theme"
+import 'swiper/css';
 import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import { useEffect, useState } from "react"
@@ -11,6 +14,7 @@ export default function App({ Component, pageProps: { session, ...pageProps } }:
   const [api, setApi] = useState<Api | null>(null);
   const router = useRouter();
   const pathname = usePathname();
+  const theme = createTheme()
 
   useEffect(() => {
     const obj = new Api({
@@ -22,15 +26,17 @@ export default function App({ Component, pageProps: { session, ...pageProps } }:
 
   useEffect(() => {
     if (api) {
-      if (!api.checkToken() && pathname != "/login" && pathname != "/password-recovery" && pathname != "/register") router.push("/login");
+      if (!api.checkToken() && pathname != "/login" && pathname != "/password-recovery" && pathname != "/register" && pathname != "/email-confirmation") router.push("/login");
     }
   }, [api]);
 
 
   return <>
-    <CssBaseline />
-    <SessionProvider session={session}>
-      {api && <ApiProvider value={api}><Component {...pageProps} /></ApiProvider>}
-    </SessionProvider>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <SessionProvider session={session}>
+        {api && <ApiProvider value={api}><Component {...pageProps} /></ApiProvider>}
+      </SessionProvider>
+    </ThemeProvider>
   </>
 }

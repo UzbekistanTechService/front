@@ -1,7 +1,4 @@
 import Head from 'next/head'
-import { Button } from '@mui/material';
-import { useApi } from '@/components/api';
-import { useRouter } from 'next/router';
 import Clients from "@/components/Clients";
 import Hero from "@/components/Hero";
 import Portfolio from "@/components/Portfolio";
@@ -9,11 +6,9 @@ import Prices from "@/components/Prices";
 import Solutions from "@/components/Solutions";
 import Workers from "@/components/workers";
 import 'react-toastify/dist/ReactToastify.css';
+import Header from '@/components/header';
 
 export default function Home() {
-  const api = useApi()
-  const router = useRouter()
-
   return (
     <>
       <Head>
@@ -23,7 +18,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Button color="error" variant="contained" onClick={() => { api.logOut(); router.push("/login") }}>Exit</Button>
+        <Header />
         <Hero />
         <Portfolio />
         <Solutions />

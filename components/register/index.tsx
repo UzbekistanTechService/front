@@ -39,16 +39,6 @@ export default function Register() {
         }
     }
 
-    // useEffect(() => {
-    //     axios.get('https://marketing-uts.onrender.com/api/user/google/callback')
-    //       .then(function (response) {
-    //         console.log(response.data);
-    //       })
-    //       .catch(function (error) {
-    //         console.log(error);
-    //       });
-    //   }, []);
-
     const onFinish = async () => {
         setOpen(true)
         try {
@@ -57,9 +47,8 @@ export default function Register() {
                 email: emailRegister,
                 password: passwordRegister,
             })
-
             localStorage.setItem("userToken", res?.data.token);
-            router.push("/")
+            router.push("/personal-page")
         } catch (e) {
             console.log(e);
             toast.error(`${e}`)

@@ -1,0 +1,298 @@
+.reg
+    display: flex
+
+    &__left
+        width: 50%
+        background: url("/Rectangle.png")
+        background-size: cover
+        position: relative
+        height: 100vh
+        display: flex
+        align-items: center
+        justify-content: center
+        @media (max-width: 1120px)
+            display: none
+
+    &__info
+        position: absolute
+        left: 0
+        width: 550px
+        height: 600px
+        padding: 43px 57px
+        flex-shrink: 0
+        border-radius: 0px 30px 30px 0px
+        background: rgba(255, 255, 255, 0.21)
+        box-shadow: 0px 0px 59px 10px rgba(255, 255, 255, 0.20) inset
+
+        h1
+            color: #FFF
+            leading-trim: both
+            text-edge: cap
+            font-family: Heebo
+            font-style: normal
+            font-weight: 900
+            line-height: 30px
+            text-transform: capitalize
+
+        p
+            color: #FFF
+            leading-trim: both
+            text-edge: cap
+            font-family: Heebo
+            font-size: 25px
+            font-style: normal
+            font-weight: 400
+            line-height: 30px
+            text-transform: capitalize
+
+        img
+            position: absolute
+            bottom: -20px
+            left: -50px
+            z-index: 999
+            transform: rotateY(180deg)
+
+    &__right
+        width: 50%
+        background-color: #E9E4FF
+        height: 100vh
+        position: relative
+        display: flex
+        align-items: center
+        justify-content: center
+        @media (max-width: 1120px)
+            width: 100%
+
+        img:nth-child(1)
+            position: absolute
+            top: 0
+            left: -30px
+            transform: rotate(270deg)
+            width: 350px
+
+        img:nth-child(2)
+            position: absolute
+            bottom: 4px
+            left: -20px
+            transform: rotate(90deg)
+            width: 350px
+
+    &__form
+        position: absolute
+        text-align: center
+        right: 0
+        width: 550px
+        height: 600px
+        flex-shrink: 0
+        padding: 35px 50px
+        border-radius: 30px 0px 0px 30px
+        background: #F6F4FF
+        box-shadow: 0px 0px 59px 10px rgba(255, 255, 255, 0.20) inset, 4px 4px 4px 0px rgba(156, 156, 156, 0.25)
+        @media (max-width: 1120px)
+            position: relative
+            border-radius: 30px
+            width: 70%
+
+        @media (max-width: 600px)
+            position: relative
+            border-radius: 30px
+            width: 90%
+
+        h2
+            color: #000
+            text-align: center
+            font-family: Gupter
+            font-size: 43px
+            font-style: normal
+            font-weight: 700
+            line-height: 35px
+            letter-spacing: 0.86px
+            text-transform: capitalize
+            margin: 0
+            margin-bottom: 30px
+            @media (max-width: 1120px)
+                margin-bottom: 30px
+
+            @media (max-width: 720px)
+                font-size: 30px
+                margin-bottom: 50px
+
+        form
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            gap: 13px
+            @media (max-width: 1120px)
+                gap: 10px
+
+    &__inputRegister
+        width: 100%
+        height: 50px
+        border: none
+        outline: none
+        padding: 0px 20px
+        border-radius: 5px
+        font-size: 20px
+        background: #FDFDFD
+        box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.12)
+        @media (max-width: 720px)
+            height: 40px
+
+    &__inputPassword
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 100%
+        height: 50px
+        border: none
+        outline: none
+        padding: 0px 20px
+        border-radius: 5px
+        font-size: 20px
+        background: #FDFDFD
+        box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.12)
+        @media (max-width: 720px)
+            height: 40px
+
+        input
+            outline: none
+            border: none
+            width: 100%
+            height: 100%
+            font-size: 20px
+
+        span
+            cursor: pointer
+            font-size: 20px
+
+            p
+                color: #000
+                font-family: Harmattan
+                font-size: 25px
+                font-style: normal
+                font-weight: 400
+                line-height: 20px
+                text-transform: capitalize
+
+    &__footerCard
+        display: flex
+        flex-direction: column
+        gap: 10px
+        margin-top: 30px
+
+        div
+            display: flex
+            align-items: center
+            justify-content: center
+            gap: 20px
+
+        button
+            display: inline-flex
+            padding: 15px 110px
+            justify-content: center
+            align-items: center
+            gap: 10px
+            border-radius: 10px
+            background: #CB4C96
+            color: #FFF
+            font-family: Heebo
+            font-size: 30px
+            font-style: normal
+            font-weight: 700
+            line-height: 20px
+            text-transform: capitalize
+
+        p
+            color: #000
+            font-family: Heebo
+            font-size: 20px
+            font-style: normal
+            font-weight: 300
+            line-height: 20px
+            text-transform: capitalize
+            @media (max-width: 720px)
+                font-size: 15px
+
+        a
+            color: #EE86C3
+            font-family: Heebo
+            font-size: 23px
+            font-style: normal
+            font-weight: 500
+            line-height: 20px
+            text-transform: capitalize
+            text-decoration: none
+            @media (max-width: 720px)
+                font-size: 15px
+
+    &__user
+        position: absolute
+        bottom: 0
+        right: 0
+        width: 400px
+        height: 600px
+        border-radius: 30px
+        background: linear-gradient(183deg, rgba(236,236,236,1) 0%, rgba(170,170,170,1) 100%)
+        text-align: center
+
+        img:nth-child(1)
+            position: absolute
+            top: 30px
+            right: 100px
+            width: 150px
+            transform: rotateY(180deg)
+
+        img:nth-child(2)
+            position: absolute
+            top: 15px
+            left: 70px
+            width: 270px
+
+        img:nth-child(3)
+            position: absolute
+            top: 30px
+            left: 30px
+            width: 270px
+
+    &__linkButton
+        position: absolute
+        bottom: 50px
+        padding: 0 30px
+
+        h2
+            color: #000
+            text-align: center
+            font-family: Lora
+            font-size: 40px
+            font-style: italic
+            font-weight: 600
+            line-height: 35px
+            text-transform: capitalize
+
+        p
+            color: rgba(0, 0, 0, 0.75)
+            text-align: center
+            font-family: Lora
+            font-size: 18px
+            font-style: normal
+            font-weight: 600
+            line-height: 150%
+            text-transform: capitalize
+
+        button
+            height: 40px
+            padding: 10px 30px
+            flex-shrink: 0
+            border-radius: 5px
+            background: #DCA711
+            color: #FFF
+            text-align: center
+            leading-trim: both
+            text-edge: cap
+            font-family: Heebo
+            font-size: 16px
+            font-style: normal
+            font-weight: 500
+            line-height: 0px
+            letter-spacing: 1.12px
+            text-transform: capitalize

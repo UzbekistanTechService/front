@@ -21,12 +21,12 @@ export default function Home() {
         <Solutions />
         <Prices />
         <Clients />
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id perspiciatis
-        excepturi recusandae corporis ipsum, necessitatibus similique aliquid
-        ducimus et, esse nemo at explicabo quidem vel commodi culpa saepe!
-        Atque, doloremque.
-
         <Workers />
+        <div className="videobackground">
+          <video autoPlay loop muted>
+            <source src="/images/mindshare_header_video.mp4" type="video/mp4" />
+          </video>
+        </div>
       </main>
     </>
   );

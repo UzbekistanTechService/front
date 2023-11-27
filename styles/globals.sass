@@ -6,7 +6,18 @@
 body
   background: white
   font-family: AkiraExpanded
+  overflow-x: hidden
 
 @font-face
   font-family: "KronaOne-Regular"
   src: url("/fonts/KronaOne-Regular.ttf")
+
+.videobackground
+  width: 100%
+  height: 100vh
+  & video
+    width: 100%
+    height: 100%
+    object-fit: cover
+    background-size: cover
+    background-position: center

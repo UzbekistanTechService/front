@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Portfolio from "@/components/Portfolio";
 import Prices from "@/components/Prices";
 import Solutions from "@/components/Solutions";
+import Workers from "@/components/workers";
 import Head from "next/head";
 
 export default function Home() {
@@ -20,6 +21,12 @@ export default function Home() {
         <Solutions />
         <Prices />
         <Clients />
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id perspiciatis
+        excepturi recusandae corporis ipsum, necessitatibus similique aliquid
+        ducimus et, esse nemo at explicabo quidem vel commodi culpa saepe!
+        Atque, doloremque.
+
+        <Workers />
       </main>
     </>
   );

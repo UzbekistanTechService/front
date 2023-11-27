@@ -20,6 +20,7 @@ export default function Register() {
     const [passwordRegister, setPasswordRegister] = useState<string>("")
     const [eyePassword, setEyePassword] = useState<boolean>(false)
     const api = useApi();
+    const router = useRouter()
     // const { status } = useSession();
 
     // console.log(status);
@@ -47,8 +48,6 @@ export default function Register() {
     //         console.log(error);
     //       });
     //   }, []);
-
-    const router = useRouter()
 
     const onFinish = async () => {
         setOpen(true)

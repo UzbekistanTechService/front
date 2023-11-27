@@ -71,7 +71,7 @@ export default function Login() {
                             <input id="remember" type="checkbox" onChange={() => setChecked(!isChecked)} />
                             <label htmlFor="remember">Remember me</label>
                         </Box>
-                        <Link href="/password-recovery">Forgot Password?</Link>
+                        <Link href="/email-confirmation">Forgot Password?</Link>
                     </Box>
 
                     <Box className={styles.reg__footerCard}>

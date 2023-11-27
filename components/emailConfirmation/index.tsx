@@ -16,7 +16,7 @@ export default function EmailConfirmation() {
         setOpen(true)
 
         try {
-            const { data } = await axios.post(`${api.baseUrl}api/user/send_mail`, { email: emailText })
+            await axios.post(`${api.baseUrl}api/user/send_mail`, { email: emailText })
             toast.success("A message will be sent to the email")
         } catch (e) {
             console.log(e);

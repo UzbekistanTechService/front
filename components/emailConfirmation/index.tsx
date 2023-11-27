@@ -3,36 +3,36 @@ import { useState } from "react"
 import axios from "axios"
 import Loading from "@/components/loading"
 import { useApi } from "@/components/api"
-import { useRouter } from "next/router"
+import { toast, ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 export default function EmailConfirmation() {
     const [open, setOpen] = useState<boolean>(false)
-    const [email, setEmail] = useState<string>("")
+    const [emailText, setEmailText] = useState<string>("")
     const api = useApi()
-    const router = useRouter()
 
     const send = async () => {
         setOpen(true)
+
         try {
-            const { data } = await axios.post(`${api.baseUrl}api/user/send_mail`, { email })
-            if (data?.token) {
-                localStorage.setItem("userEmail", data?.user.email)
-                localStorage.setItem("userToken", data?.token)
-                // router.push("/password-recovery")
-            }
+            const { data } = await axios.post(`${api.baseUrl}api/user/send_mail`, { email: emailText })
+            toast.success("A message will be sent to the email")
         } catch (e) {
             console.log(e);
             setOpen(false)
         }
+        finally { setOpen(false) }
     }
 
     return <>
         <Loading open={open} />
+        <ToastContainer />
 
         <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center", height: "100vh" }}>
             <Box sx={{ border: "1px solid #666", padding: 4, borderRadius: 2, display: "flex", flexDirection: "column", gap: 2 }}>
-                <TextField label="Email" variant="standard" type="email" onChange={(e) => setEmail(e.target.value)} />
-                <Button variant="contained" color="success" disabled={email === ""} onClick={send}>
+                <TextField label="Email" variant="standard" type="email" onChange={(e) => setEmailText(e.target.value)} />
+                <Button variant="contained" color="success" disabled={emailText === ""} onClick={send}>
                     Send
                 </Button>
             </Box>

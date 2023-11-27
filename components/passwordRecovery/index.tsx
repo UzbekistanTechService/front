@@ -12,16 +12,14 @@ export default function PasswordRecovery() {
     const api = useApi()
     const router = useRouter()
 
+
     const onFinish = async () => {
         setOpen(true)
         try {
-            const userEmail = localStorage.getItem("userEmail")
-
             await axios.post(`${api.baseUrl}api/user/forgot_password/`, {
-                email: userEmail,
                 new_password: newPassword,
-                confirm_new_password: newPassword,
-                token: api.getToken()
+                confirm_new_password: confirmNewPassword,
+                token: router.query?.token
             })
             api.logOut()
             router.push("/login")
@@ -30,8 +28,6 @@ export default function PasswordRecovery() {
             setOpen(false)
         }
     }
-
-
 
     return <>
         <Loading open={open} />

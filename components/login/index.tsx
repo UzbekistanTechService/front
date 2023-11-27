@@ -28,7 +28,7 @@ export default function Login() {
                 password: passwordRegister,
             })
             localStorage.setItem("userToken", res?.data.token);
-            router.push("/")
+            router.push("/personal-page")
         } catch (e) {
             console.log(e);
             toast.error(`${e}`)

@@ -1,4 +1,5 @@
 import Sponsors from "@/components/sponsor";
+import StepWork from "@/components/stepsWork";
 import Workers from "@/components/workers";
 import Head from "next/head";
 
@@ -19,6 +20,7 @@ export default function Home() {
 
         <Workers />
         <Sponsors />
+        <StepWork />
       </main>
     </>
   );

@@ -5,9 +5,10 @@ import Portfolio from "@/components/Portfolio";
 import Prices from "@/components/Prices";
 import Solutions from "@/components/Solutions";
 import Workers from "@/components/workers";
-import 'react-toastify/dist/ReactToastify.css';
 import Header from '@/components/header';
 import Reason from '@/components/reason';
+import Courses from "@/components/Courses"
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
           </video>
         </div>
         <Reason />
+        <Courses />
       </main>
     </>
   );

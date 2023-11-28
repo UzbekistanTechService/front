@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import style from "@/styles/purchase.module.sass";
 import { useRouter } from "next/router";
@@ -7,7 +7,6 @@ import { LoadingButton } from "@mui/lab";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import axios from "@/utils/axios.config";
-import purchaseAnimation from "@/icons/PurchaseAnim.json"
 import Image from "next/image";
 
 const Purchase = () => {

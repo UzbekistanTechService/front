@@ -7,6 +7,7 @@ import Solutions from "@/components/Solutions";
 import Workers from "@/components/workers";
 import 'react-toastify/dist/ReactToastify.css';
 import Header from '@/components/header';
+import Reason from '@/components/reason';
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
             <source src="/images/mindshare_header_video.mp4" type="video/mp4" />
           </video>
         </div>
+        <Reason />
       </main>
     </>
   );

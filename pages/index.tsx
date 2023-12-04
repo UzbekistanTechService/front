@@ -10,6 +10,7 @@ import Reason from '@/components/reason';
 import Courses from "@/components/Courses"
 import 'react-toastify/dist/ReactToastify.css';
 import CompanyinNumbers from '@/components/companyInNumbers/index';
+import Steps from '@/components/Steps';
 
 export default function Home() {
   return (
@@ -36,6 +37,7 @@ export default function Home() {
         <Reason />
         <Courses />
         <CompanyinNumbers/>
+        <Steps />
       </main>
     </>
   );

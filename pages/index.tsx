@@ -1,16 +1,17 @@
-import Head from 'next/head'
+import Head from "next/head";
 import Clients from "@/components/Clients";
 import Hero from "@/components/Hero";
 import Portfolio from "@/components/Portfolio";
 import Prices from "@/components/Prices";
 import Solutions from "@/components/Solutions";
 import Workers from "@/components/workers";
-import Header from '@/components/header';
-import Reason from '@/components/reason';
-import Courses from "@/components/Courses"
-import 'react-toastify/dist/ReactToastify.css';
-import CompanyinNumbers from '@/components/companyInNumbers/index';
-import Steps from '@/components/Steps';
+import Header from "@/components/header";
+import Reason from "@/components/reason";
+import Courses from "@/components/Courses";
+import "react-toastify/dist/ReactToastify.css";
+import CompanyinNumbers from "@/components/companyInNumbers/index";
+import Steps from "@/components/Steps";
+import Footer from "@/components/footer/index";
 
 export default function Home() {
   return (
@@ -36,8 +37,9 @@ export default function Home() {
         </div>
         <Reason />
         <Courses />
-        <CompanyinNumbers/>
+        <CompanyinNumbers />
         <Steps />
+        <Footer />
       </main>
     </>
   );

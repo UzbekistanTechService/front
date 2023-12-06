@@ -1,0 +1,154 @@
+@import "@/styles/mixins"
+
+.footer
+    @include container
+
+    &__text
+        display: flex
+        align-items: center
+        @media (max-width: 1000px)
+            display: block
+
+    &__left
+        width: 50%
+        @media (max-width: 1000px)
+            width: 100%
+
+        h3
+            color: #82c0e6
+            line-height: 124px
+            font-size: 80px
+            font-family: 'Montserrat',Arial,sans-serif
+            font-weight: 700
+            @media (max-width: 600px)
+                font-size: 50px
+
+        p
+            line-height: 37px
+            color: #fff
+            font-size: 24px
+            font-family: 'Montserrat',Arial,sans-serif
+            font-weight: 700
+
+        a
+            line-height: 37px
+            color: #ff9469
+            font-size: 24px
+            font-family: 'Montserrat',Arial,sans-serif
+            font-weight: 700
+            text-decoration: none
+            @media (max-width: 600px)
+                font-size: 15px
+
+            span
+                color: rgb(133, 136, 232)
+
+    &__right
+        width: 50%
+        position: relative
+        @media (max-width: 1000px)
+            width: 100%
+
+        img
+            width: 100%
+
+        button
+            position: absolute
+            bottom: 7%
+            left: 40%
+            font-size: 13px
+            font-family: 'Montserrat',Arial,sans-serif
+            line-height: 1.55
+            font-weight: 600
+            text-transform: uppercase
+            border-width: 2px
+            border-radius: 8px
+            background-image: linear-gradient(254deg, rgba(143,177,240,1) 0%, rgba(95,97,227,1) 100%)
+            border-color: #abacff
+            border-style: solid
+            transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out
+            box-shadow: 0px 0px 0px 4px rgba(133,136,232,0.8)
+            padding: 18px
+            @media (max-width: 1000px)
+                font-size: 7px
+                padding: 10px
+
+    &__questions
+        display: flex
+        align-items: center
+        justify-content: space-between
+        padding-bottom: 30px
+        @media (max-width: 900px)
+            display: block
+
+        h4
+            line-height: 62px
+            font-size: 40px
+            font-family: 'Montserrat',Arial,sans-serif
+            font-weight: 700
+            color: #fff
+            @media (max-width: 600px)
+                font-size: 25px
+
+        p
+            line-height: 26px
+            font-size: 17px
+            font-family: 'Montserrat',Arial,sans-serif
+            font-weight: 400
+            color: #fff
+            @media (max-width: 600px)
+                font-size: 15px
+
+    &__send
+        display: flex
+        align-items: center
+        gap: 20px
+        @media (max-width: 900px)
+            margin-top: 20px
+        @media (max-width: 600px)
+            display: block
+
+        input
+            border: 1px solid rgb(255, 148, 105)
+            background: none
+            color: rgba(255, 255, 255, 0.466)
+            outline: none
+            font-size: 18px
+            padding: 10px 20px
+            @media (max-width: 600px)
+                width: 100%
+
+        button
+            font-weight: 400
+            font-size: 18px
+            background-color: #ff9469
+            font-family: "Montserrat", sans-serif
+            border-radius: 0
+            color: #000
+            cursor: pointer
+            border: none
+            padding: 10px 20px
+            @media (max-width: 600px)
+                width: 100%
+                margin-top: 20px
+
+.footerLink
+    @include container
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 20px 70px
+
+    p
+        line-height: 22px
+        color: #fff
+        font-size: 14px
+        font-family: 'Montserrat',Arial,sans-serif
+        font-weight: 400
+
+    a
+        font-size: 12px
+        text-decoration: none
+        line-height: 14px
+        font-family: 'Montserrat',Arial,sans-serif
+        color: #fff

@@ -8,10 +8,11 @@ import Workers from "@/components/workers";
 import Header from "@/components/header";
 import Reason from "@/components/reason";
 import Courses from "@/components/Courses";
-import "react-toastify/dist/ReactToastify.css";
-import CompanyinNumbers from "@/components/companyInNumbers/index";
+import CompanyinNumbers from "@/components/companyInNumbers";
 import Steps from "@/components/Steps";
-import Footer from "@/components/footer/index";
+import Footer from "@/components/footer";
+import HeaderMenu from "@/components/headerMenu";
+import Services from "@/components/servises";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       </Head>
       <main>
         <Header />
+        <HeaderMenu />
         <Hero />
         <Portfolio />
         <Solutions />
@@ -39,6 +41,7 @@ export default function Home() {
         <Courses />
         <CompanyinNumbers />
         <Steps />
+        <Services/>
         <Footer />
       </main>
     </>

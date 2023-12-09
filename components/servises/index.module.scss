@@ -1,0 +1,239 @@
+.container {
+    max-width: 1395px;
+    width: 100%;
+    padding: 15px 0;
+    margin: 0 auto;
+}
+
+.services {
+    background-color: #303030;
+
+    &__block {
+        margin-top: 70px;
+    }
+
+    &__blockTitle {
+        color: #82C0E6;
+        font-size: 4rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__blockTitle::before {
+        content: 'НАШИ УСЛУГИ';
+        position: absolute;
+        top: -50px;
+        left: 15px;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        opacity: 0.3;
+        color: rgb(102, 102, 102);
+        font-size: 5.5rem;
+    }
+
+    &__hr {
+        border-color: #4D4D4D;
+        margin-top: 20px;
+    }
+
+    &__blockItems {
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 80px;
+        margin-bottom: 80px;
+    }
+
+    &__blockItem {
+        position: relative;
+        margin-left: 90px;
+    }
+
+    &__blockItem2 {
+        position: relative;
+        margin-left: 90px;
+    }
+
+    &__blockItem3 {
+        position: relative;
+        margin-left: 90px;
+    }
+
+    &__blockItem4 {
+        position: relative;
+        margin-left: 90px;
+    }
+
+    &__blockItem5 {
+        position: relative;
+        margin-left: 90px;
+    }
+
+    &__blockItem6 {
+        position: relative;
+        margin-left: 90px;
+    }
+
+    &__blockItem::before {
+        content: '1';
+        position: absolute;
+        top: -30px;
+        left: -120px;
+        opacity: 0.3;
+        color: rgb(70, 68, 68);
+        font-size: 9rem;
+        font-weight: 700;
+        filter: drop-shadow(10px 10px 7px rgba(0, 0, 0, 0.715));
+        z-index: 999;
+    }
+
+    &__blockItem2::before {
+        content: '2';
+        position: absolute;
+        top: -30px;
+        left: -140px;
+        opacity: 0.3;
+        color: rgb(70, 68, 68);
+        font-size: 9rem;
+        font-weight: 700;
+        filter: drop-shadow(10px 10px 7px rgba(0, 0, 0, 0.715));
+        z-index: 999;
+    }
+
+    &__blockItem3::before {
+        content: '3';
+        position: absolute;
+        top: -30px;
+        left: -130px;
+        opacity: 0.3;
+        color: rgb(70, 68, 68);
+        font-size: 9rem;
+        font-weight: 700;
+        filter: drop-shadow(10px 10px 7px rgba(0, 0, 0, 0.715));
+        z-index: 999;
+    }
+
+    &__blockItem4::before {
+        content: '4';
+        position: absolute;
+        top: -30px;
+        left: -170px;
+        opacity: 0.3;
+        color: rgb(70, 68, 68);
+        font-size: 9rem;
+        font-weight: 700;
+        filter: drop-shadow(10px 10px 7px rgba(0, 0, 0, 0.715));
+        z-index: 999;
+    }
+
+    &__blockItem5::before {
+        content: '5';
+        position: absolute;
+        top: -30px;
+        left: -130px;
+        opacity: 0.3;
+        color: rgb(70, 68, 68);
+        font-size: 9rem;
+        font-weight: 700;
+        filter: drop-shadow(10px 10px 7px rgba(0, 0, 0, 0.715));
+        z-index: 999;
+    }
+
+    &__blockItem6::before {
+        content: '6';
+        position: absolute;
+        top: -30px;
+        left: -140px;
+        opacity: 0.3;
+        color: rgb(70, 68, 68);
+        font-size: 9rem;
+        font-weight: 700;
+        filter: drop-shadow(10px 10px 7px rgba(0, 0, 0, 0.715));
+        z-index: 999;
+    }
+
+    &__blockText {
+        color: #ffff;
+        font-size: 50px;
+        font-weight: 700;
+        transition: border-bottom 0.5s ease;
+        cursor: pointer;
+    }
+
+    &__blockText:hover {
+        width: max-content;
+        border-bottom: 2px solid rgb(250, 185, 64);
+    }
+
+    &__blockItemDesc {
+        font-size: 20px;
+        font-weight: 500;
+        color: #ABABAB;
+        list-style: inside;
+        max-width: 450px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    &__blockItemDescreption {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    .services {
+        &__blockTitle {
+            color: #82C0E6;
+            font-size: 3rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        &__blockTitle::before {
+            content: 'НАШИ УСЛУГИ';
+            position: absolute;
+            top: -35px;
+            left: 15px;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            opacity: 0.3;
+            color: rgb(102, 102, 102);
+            font-size: 4rem;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .services {
+        &__blockTitle {
+            color: #82C0E6;
+            font-size: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        &__blockTitle::before {
+            content: 'НАШИ УСЛУГИ';
+            position: absolute;
+            top: -30px;
+            left: 15px;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            opacity: 0.3;
+            color: rgb(102, 102, 102);
+            font-size: 2.7rem;
+        }
+
+        &__blockText {
+            font-size: 20px;
+        }
+
+        &__blockItemDesc {
+            font-size: 15px;
+        }
+    }
+}

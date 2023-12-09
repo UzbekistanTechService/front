@@ -1,0 +1,208 @@
+.container {
+  max-width: 1400px;
+  width: 100%;
+  padding: 50px 0;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #1f1f1f;
+
+  &__left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__sanbar {
+    width: 50%;
+    text-align: center;
+  }
+
+  &__leftDesc {
+    width: 48%;
+    line-height: 21px;
+    background-color: rgb(145, 145, 255);
+    padding: 28px;
+    font-weight: 400;
+    color: #fff;
+    font-size: 16px;
+    font-family: "Montserrat", Arial, sans-serif;
+  }
+
+  &__sanbarTitle {
+    display: inline-flex;
+    background: url("../../public//IYNL.gif");
+    font-size: 150px;
+    background-clip: text;
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #5b728a54;
+    animation: move 30s linear infinite;
+    letter-spacing: 4rem;
+  }
+
+  @keyframes move {
+    from {
+      background-position: 0 80%;
+    }
+
+    to {
+      background-position: 100% 80%;
+    }
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__rightTitle {
+    font-weight: 700;
+    font-size: 70px;
+    font-family: "Montserrat", Arial, sans-serif;
+    color: #fff;
+    margin-bottom: 25px;
+    line-height: 70px;
+    letter-spacing: 4px;
+  }
+
+  &__rightDesc {
+    line-height: 23px;
+    font-family: "Montserrat", Arial, sans-serif;
+    color: #fff;
+    font-weight: 400;
+    font-size: 18px;
+    max-width: 550px;
+  }
+
+  &__rightBlock {
+    width: 50%;
+  }
+
+  &__rightBlockRequest {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  &__rightBlockDesc {
+    line-height: 20px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 17px;
+    font-family: "Montserrat", Arial, sans-serif;
+    max-width: 450px;
+  }
+
+  &__rightBtn {
+    color: #000;
+    background: #ff9469;
+    padding: 17px;
+    font-size: 17px;
+    font-family: "Montserrat";
+    cursor: pointer;
+    font-weight: 400;
+    border: none;
+  }
+
+  &__titleBlock {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+}
+
+.customPhoneInput {
+  background-color: rgb(247, 247, 247);
+  padding: 15px;
+}
+
+.customPhoneInput input {
+  padding: 5px;
+  outline: none;
+  border: none;
+}
+
+@media (max-width: 900px) {
+  .header {
+    &__left {
+      display: block;
+    }
+
+    &__sanbar {
+      width: 100%;
+      text-align: center;
+    }
+
+    &__sanbarTitle {
+      font-size: 100px;
+    }
+
+    &__titleBlock {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    &__rightTitle {
+      margin-top: 10px;
+      font-size: 50px;
+      line-height: 50px;
+      text-align: center;
+      margin-bottom: 5px;
+    }
+
+    &__rightDesc {
+      text-align: center;
+      max-width: 100%;
+    }
+
+    &__right {
+      display: block;
+    }
+
+    &__leftDesc {
+      width: 100%;
+    }
+
+    &__rightBlock {
+      width: 100%;
+    }
+
+    &__rightBlockDesc {
+      max-width: 100%;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    &__rightBtn {
+      width: 30%;
+    }
+  }
+
+  .customPhoneInput {
+    width: 70%;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    &__sanbarTitle {
+      font-size: 50px;
+    }
+
+    &__rightTitle {
+      font-size: 30px;
+    }
+
+    &__rightBtn {
+      font-size: 10px;
+      padding: 11px;
+    }
+  }
+
+  .customPhoneInput {
+    padding: 10px;
+  }
+}
